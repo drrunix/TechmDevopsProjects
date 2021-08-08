@@ -1,0 +1,14 @@
+- hosts: all
+  become: true
+
+  tasks:
+     - name: getting docker image from dockerhub
+       command: sudo docker pull drrunix/tillyrepo:latest
+
+
+     - name: stop all dockers if already running
+       shell: sudo service docker restart
+
+
+     - name: finalstep
+       shell: sudo docker run -p 8080:8080 -dt  drrunix/tillyrepo:latest
