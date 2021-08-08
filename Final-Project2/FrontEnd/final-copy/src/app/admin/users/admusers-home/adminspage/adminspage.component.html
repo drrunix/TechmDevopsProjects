@@ -1,0 +1,10 @@
+<h2>Administrator users</h2>
+<div class="form">
+    <input type="text" [(ngModel)]="username">
+    <button mat-raised-button [disabled]="username.length<4" (click)="storeUser()" >
+        <mat-icon color="white" 
+        aria-hidden="false" aria-label="Example home icon">add</mat-icon>
+        Add User
+    </button>
+</div>
+<app-usertable [users]="users"></app-usertable>

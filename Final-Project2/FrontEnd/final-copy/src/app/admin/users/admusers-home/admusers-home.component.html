@@ -1,0 +1,12 @@
+<app-dashboard-item title="Users"
+ [count]="usercount" 
+ imgurl="http://localhost:5000/files/images/users.png"
+ (click)="changeroute('users')">
+</app-dashboard-item>
+
+
+<app-dashboard-item title="Administrators"
+ [count]="admincount" 
+ imgurl="http://localhost:5000/files/images/admins.png"
+ (click)="changeroute('admins')">
+</app-dashboard-item>

@@ -1,0 +1,40 @@
+<div class="table-content">
+    <div class="left-table">
+        <h1>Weight Changes</h1>
+             <table>
+             <thead>
+                 <tr>
+                     <th>Date</th>
+                     <th>Weight(lbs)</th>
+ 
+                 </tr>
+             </thead>
+             <tbody>
+                   <tr *ngFor="let x of progress">
+                         <td>{{x.date}}</td>
+                         <td>{{x.weight}}</td>
+                   </tr>
+             </tbody>
+             </table>
+    </div>
+    <div class="right-table">
+     <h1>Calories Lost Statistics</h1>
+     <table>
+     <thead>
+         <tr>
+             <th>Date</th>
+             <th>Calories(lbs)</th>
+              <th>Workout Status</th>
+         </tr>
+     </thead>
+     <tbody>
+           <tr *ngFor="let x of progress">
+                 <td>{{x.date}}</td>
+                 <td>{{x.calories}}</td>
+                 <td>{{x.status}}</td>
+           </tr>
+     </tbody>
+     </table>
+    </div>
+ 
+ </div>

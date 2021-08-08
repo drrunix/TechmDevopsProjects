@@ -1,0 +1,40 @@
+#exercise-container{
+    overflow: hidden;
+}
+
+#left-content{
+   float: left;
+   width: 40%;
+   box-sizing: border-box;
+   padding: 20px;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+#right-content{
+    float: left;
+    width: 60%;
+    box-sizing: border-box;
+    padding: 20px;
+    padding-left: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+b{
+    color: rgb(26, 2, 58);
+}
+
+#pic{
+    height: 300px;
+    width:  300px;
+    margin-left: 30px;
+}
+
+#pic img{
+    height: 100%;
+    width: 100%;
+}
+
+h1{
+    color: rgb(98, 12, 209);
+}

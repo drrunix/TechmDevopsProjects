@@ -1,0 +1,8 @@
+<div class="form-button" (click)="loadDialog()">
+   <img src="http://localhost:5000/files/images/exercise.png"> 
+   Add A new Excercise
+</div>
+
+<div id="exercises">
+    <app-exercise-item *ngFor="let x of exercises" [exercise]="x" (click)="changeroute(x)"></app-exercise-item>
+</div>

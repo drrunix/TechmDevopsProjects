@@ -1,0 +1,31 @@
+<div class="field-container"  *ngIf="data.itemtype=='address'">
+     <h3>Address</h3>
+     <textarea [(ngModel)]="address" rows="5" cols="50"></textarea>
+</div>
+
+<div class="field-container"  *ngIf="data.itemtype=='height'">
+    <h3>Height (Feets/ Inches</h3>
+    <input type="number" placeholder="feets" [(ngModel)]="feet">
+    <input type="number" placeholder="inch" [(ngModel)]="inch">
+</div>
+
+<div class="field-container"  *ngIf="data.itemtype=='weight'">
+    <h3>Weight</h3>
+    <input type="number" [(ngModel)]="weight">
+</div>
+
+<div class="field-container"  *ngIf="data.itemtype=='age'"> 
+    <h3>Age</h3>
+    <input type="number" [(ngModel)]="age">
+</div>
+
+<div class="field-container"  *ngIf="data.itemtype=='password'">
+    <h3>Password</h3>
+    <input type="password" [(ngModel)]="password">
+    <h3>Confirm Password</h3>
+    <input type="password" [(ngModel)]="cpassword">
+</div> 
+<div class="error">{{error}}</div>
+<div class="submit-item">
+    <button (click)="updateRecord()">Update</button>
+</div>

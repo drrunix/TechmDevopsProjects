@@ -1,0 +1,28 @@
+.icon-group{
+    width: 75px;
+    margin: 5px;
+    margin-top: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color:  rgb(177, 117, 202);
+    color: white;
+    text-align: center;
+    box-shadow: 5px 5px 5px  rgb(186, 133, 209);
+    cursor: pointer;
+}
+
+.icon-group:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+
+}
+
+h5{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    cursor: pointer;
+}
+
+.icon{
+    cursor:pointer;
+}

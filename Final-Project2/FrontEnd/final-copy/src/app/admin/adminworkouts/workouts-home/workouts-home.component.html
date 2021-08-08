@@ -1,0 +1,11 @@
+<div class="form-button" (click)="loadDialog()"> 
+    <img src="http://localhost:5000/files/images/workout.png"> 
+    Add A Workout plan
+ </div>
+
+ <div id="workouts">
+     <app-workout-item *ngFor="let workout of workouts" 
+     [workout]="workout"
+     (click)="changeroute(workout)">
+    </app-workout-item>
+ </div>

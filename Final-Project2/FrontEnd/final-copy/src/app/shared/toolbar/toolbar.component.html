@@ -1,0 +1,66 @@
+
+
+
+<div class="sidebar">
+
+   <app-menuitem
+    icontext="Users"
+    iconname="supervisor_account"  
+    *ngIf="admin"
+    [iconstyle]="menugroup[0].active?'active':''"
+    (click)="activate(0)"></app-menuitem>
+
+   <app-menuitem icontext="Workout Plans"
+    iconname="list_alt"
+    *ngIf="admin"
+    [iconstyle]="menugroup[1].active?'active':''"
+    (click)="activate(1)"></app-menuitem>
+
+    <app-menuitem icontext="Workout Plans"
+    iconname="list_alt"
+    *ngIf="user"
+    [iconstyle]="menugroup[2].active?'active':''"
+    (click)="activate(2)"></app-menuitem>
+
+   <app-menuitem icontext="Exercises" 
+   iconname="self_improvement"
+   *ngIf="admin"
+   [iconstyle]="menugroup[3].active?'active':''"
+   (click)="activate(3)"></app-menuitem>
+
+   <app-menuitem icontext="Exercises" 
+   iconname="self_improvement"
+   *ngIf="user"
+   [iconstyle]="menugroup[4].active?'active':''"
+   (click)="activate(4)"></app-menuitem>
+
+   <app-menuitem icontext="Profile" 
+   iconname="dashboard"
+   *ngIf="user"
+   [iconstyle]="menugroup[5].active?'active':''"
+   (click)="activate(5)"></app-menuitem>
+
+   <app-menuitem icontext="Progress"
+    iconname="insert_chart_outlined"
+    *ngIf="user"
+    [iconstyle]="menugroup[6].active?'active':''"
+    (click)="activate(6)"></app-menuitem>
+</div>
+
+<mat-toolbar color="primary" class="toolbar">
+    <div  class="title">
+        <mat-icon aria-hidden="false" aria-label="Example home icon">fitness_center</mat-icon>
+
+         Fitness Tracker
+        <summary class="subtitle">{{subtitle}}</summary>
+    </div>
+    <div class="signout">
+        <button mat-button [matMenuTriggerFor]="menu">
+            <mat-icon aria-hidden="false" aria-label="Example home icon">account_circle</mat-icon>
+
+            {{username}}!</button>
+    <mat-menu #menu="matMenu" >
+        <button mat-menu-item  (click)="logout()">Signout</button>
+      </mat-menu>
+    </div>
+</mat-toolbar>

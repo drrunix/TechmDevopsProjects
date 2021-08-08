@@ -1,0 +1,25 @@
+.container{
+  overflow: hidden;
+  padding: 30px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.left{
+  float: left;
+  width: 48%;
+  
+}
+
+.right{
+   float: left;
+   width: 48%;
+  
+}
+
+h1{
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(96, 96, 168);
+    margin-bottom: 20px;
+}

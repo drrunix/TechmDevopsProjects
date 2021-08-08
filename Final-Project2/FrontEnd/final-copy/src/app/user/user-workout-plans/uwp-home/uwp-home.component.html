@@ -1,0 +1,6 @@
+<div id="workouts">
+    <app-workout-item *ngFor="let workout of workouts" 
+    [workout]="workout"
+    (click)="changeroute(workout)">
+   </app-workout-item>
+</div>

@@ -1,0 +1,28 @@
+.form-button{
+    border-radius: 10px;
+    background-color:#AF7AC5;
+    padding: 10px;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    box-shadow: 5px 5px 10px rgb(222, 160, 248);
+    width: 200px;
+    
+}
+
+.form-button img
+{
+  height: 60px;
+  width: 60px;
+  margin-right: 10px;
+  vertical-align: text-bottom;
+  
+}
+
+#exercises{
+     padding: 20px;
+     overflow: hidden;
+}
+

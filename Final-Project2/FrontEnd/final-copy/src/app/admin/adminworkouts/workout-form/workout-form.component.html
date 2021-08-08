@@ -1,0 +1,61 @@
+<form [formGroup]="myForm" (submit)="addWorkout()">
+    <div class="container">
+        <h1>Adding a new Workout</h1>
+    
+        <div class="left">
+        <div class="form-item">
+                <label class="label">Name</label>
+                <input type="text" formControlName="name" >
+         </div>
+         <div class="form-item">
+           <label class="label">Description</label>
+           <textarea formControlName="description"></textarea>
+         </div>
+        
+        
+       
+        </div>
+        <div class="right">
+        <div class="form-item">
+            <label class="label"> Weeks</label>
+            <input type="number" formControlName="weeks" >
+        </div>
+    
+        <div class="form-item">
+            <label class="label"> Days</label>
+            <input type="number" formControlName="days" >
+        </div>
+     
+      
+    
+        <div class="form-item">
+            <label class="label">Image file</label>
+            <input type="file" formControlName="imagefile" (change)="uploadFile1($event)">
+        </div>
+        
+     
+      </div>
+    </div>  
+        
+      
+    
+    
+    <div class="submit-item" >
+        <h6 *ngIf="!myForm.valid" [style.color]="'red'" [style.textAlign]="'center'">
+            Please  enter all the fields correctly {{myForm.valid}}</h6>
+        <input type="submit" *ngIf="myForm.valid" value="add Workout">
+       
+    </div>
+
+    <div class="exercise-select">
+                <h3 [style.textAlign]="'left'" [style.color]="'darkblue'" >
+                    Please Select Exercises in this plan</h3>
+               <div class="exercise-item" *ngFor="let exercise of exercises; let i=index" 
+                [ngClass]="selected[i].class" (click)="selectedItem(i)"> 
+                <img id="main" src="http://localhost:5000/files/uploads/{{exercise.imagefile}}">
+                <img id="tick" src="http://localhost:5000/files/images/tick.png" *ngIf="selected[i].class=='tick'">
+                <div class="name">{{exercise.name}}</div> 
+               </div>
+    </div>
+    
+    </form>

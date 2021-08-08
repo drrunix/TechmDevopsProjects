@@ -1,0 +1,22 @@
+.user-tab{
+    margin: 30px;
+    padding: 20px;
+}
+
+th{
+    width: 200px;
+    height: 40px;
+    padding: 10px;
+    background-color:   rgb(197, 101, 238);
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+
+td{
+    width: 200px;
+    height: 40px;
+    padding: 10px;
+    color:  rgb(58, 3, 82);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}

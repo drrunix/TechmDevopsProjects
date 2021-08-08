@@ -1,0 +1,88 @@
+<form [formGroup]="myForm" (submit)="addExercise()">
+<div class="container">
+    <h1>Adding a new Exercise</h1>
+
+    <div class="left">
+    <div class="form-item">
+            <label class="label">Name</label>
+            <input type="text" formControlName="name" >
+     </div>
+     <div class="form-item">
+       <label class="label">Description</label>
+       <textarea formControlName="description"></textarea>
+     </div>
+    
+    
+    
+    <div class="form-item">
+        <label class="label">Duration</label>
+        <input type="number" formControlName="duration">
+    </div>
+    <div class="form-item">
+    <label class="label">Reps</label>
+    <input type="number" formControlName="reps">
+    </div>
+    
+    
+    <div class="form-item">
+        <label class="label">Sets</label>
+        <input type="number" formControlName="sets" >
+    </div>
+    <div class="form-item">
+    <label class="label">Calories Burnt (120-150lb)</label>
+    <input type="number" formControlName="calrange1" >
+    </div>
+    </div>
+    <div class="right">
+    <div class="form-item">
+        <label class="label">Calories Burnt (150-180lb)</label>
+        <input type="number" formControlName="calrange2" >
+    </div>
+
+    <div class="form-item">
+        <label class="label">Calories Burnt (>180lb)</label>
+        <input type="number" formControlName="calrange3" >
+    </div>
+ 
+    <div class="form-item">
+        <label class="label">Difficulty</label>
+        <select formControlName="difficulty">
+            <option>Beginner</option>
+            <option>Intermediate</option>
+            <option>Advanced</option>
+        </select>
+    </div>
+    
+    <div class="form-item">
+        <label class="label">Body Part</label>
+        <input type="text" formControlName="bodypart" >
+    </div>
+    <div class="form-item">
+        <label class="label">Equipment</label>
+        <input type="text" formControlName="equipment" >
+    </div>
+
+
+    <div class="form-item">
+        <label class="label">Image file</label>
+        <input type="file" formControlName="imagefile" (change)="uploadFile1($event)">
+    </div>
+    
+    <div class="form-item">
+        <label class="label">Video file</label>
+        <input type="file" formControlName="videofile" (change)="uploadFile2($event)">
+    </div>
+  </div>
+</div>  
+    
+  
+
+
+<div class="submit-item" >
+    <h6 *ngIf="!myForm.valid" [style.color]="'red'" [style.textAlign]="'center'">
+        Please  enter all the fields correctly {{myForm.valid}}</h6>
+    <input type="submit" *ngIf="myForm.valid" value="add Exercise">
+   
+</div>
+
+</form>

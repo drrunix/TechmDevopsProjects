@@ -1,0 +1,24 @@
+h2{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color:  rgb(85, 18, 114);
+    margin: 10px;
+    margin-top: 30px;
+    padding-left: 30px;
+}
+
+input[type="text"]{
+    width: 180px;
+    height: 30px;
+    border: 1px solid rgb(85, 18, 114);
+    margin: 10px;
+}
+
+button{
+    background-color: rgb(85, 18, 114) !important; 
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+button[disabled=disabled]{
+    color: rgb(233, 213, 213);
+}

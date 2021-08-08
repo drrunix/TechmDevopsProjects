@@ -1,0 +1,24 @@
+<div id="exercise-container">
+    <div id="left-content">
+        <div id="pic"><img src="http://localhost:5000/files/uploads/{{exercise.imagefile}}"></div>
+       <h1>{{exercise.name}}</h1>
+       <p>
+           {{exercise.description}}
+       </p>
+       
+       <h3> <b>Suggested Duration:</b> {{exercise.duration}} minutes</h3>
+       <h3> <b>Repitions : </b> {{exercise.reps}}</h3>
+       <h3> <b>Sets : </b> {{exercise.sets}}</h3>
+       <h3> <b>Equipment: </b>{{exercise.equipment}}</h3>
+       <h3> <b>Impacted Body Parts: </b> {{exercise.bodypart}}</h3>
+    </div>
+    <div id="right-content">
+        <h3> <b>Calories Burnt per min (120lb-150lb): </b> {{exercise.calrange1}}</h3>
+        <h3> <b>Calories Burnt per min (150lb-180lb): </b> {{exercise.calrange2}}</h3>
+        <h3> <b>Calories Burnt per min (>180lb): </b> {{exercise.calrange3}}</h3>
+        <h3> <b>Difficulty:   </b> {{exercise.difficulty}}</h3>
+    
+        
+      <mat-video src="http://localhost:5000/files/uploads/{{exercise.videofile}}"></mat-video>
+    </div>
+</div>

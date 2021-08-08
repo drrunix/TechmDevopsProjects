@@ -1,0 +1,24 @@
+<div id="workout-container">
+    <div id="left-content">
+        <div id="pic"><img src="http://localhost:5000/files/uploads/{{workout.imagefile}}"></div>
+       <h1>{{workout.name}}</h1>
+       <p>
+           {{workout.description}}
+       </p>
+       
+       <h3> <b> Number of Weeks:</b> {{workout.weeks}} ({{round(workout.days/workout.weeks)}} days per week)</h3>
+       <h3> <b> Number of Days : </b> {{workout.days}}</h3>
+      
+    </div>
+    <div id="right-content">
+         <h1>Exercises  Included </h1>
+        
+         <div class="exercise-item" *ngFor="let x of workoutmap; let i=index" > 
+         <img id="main" src="http://localhost:5000/files/uploads/{{x.exercise.imagefile}}">
+         <div class="name">{{x.exercise.name}}</div> 
+        </div>
+         
+        <div class="submit-item"  *ngIf="log.usertype=='user'">
+            <button [disabled]="(buttonText=='Subscribed')" (click)="subscribe()">{{buttonText}}</button></div>
+       </div>
+</div>

@@ -1,0 +1,25 @@
+li{
+    list-style-type:none;
+    background-color: #AF7AC5;
+    margin: 30px;
+    width: 320px;
+    height:50px;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px  rgb(203, 153, 224);
+    padding: 10px;
+    color: white;
+    position: relative;
+    cursor: pointer;
+    float: left
+}
+
+li img{
+    height: 50px;
+    width: 50px;
+    display: block;
+    float: left;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}

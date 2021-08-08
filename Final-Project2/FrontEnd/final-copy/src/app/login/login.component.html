@@ -1,0 +1,57 @@
+<div id="home">
+    <div id="log-page-image">
+        <img src="http://localhost:5000/files/images/logpage.jpg">
+    </div>
+
+    <div id="log-page-form"  *ngIf="logform">
+         <h2>Fitness Tracker</h2>
+
+          <div class="form-item">
+                 <label class="label">Username</label>
+                 <input type="text" name="username"  [(ngModel)]="username">
+          </div>
+          <div class="form-item">
+            <label class="label">Password</label>
+            <input type="password" name="password" [(ngModel)]="password">
+         </div>
+
+         <div class="submit-item">
+             <button type="button" (click)="login()">Login</button>
+         </div>
+         <div class="loading" *ngIf="status"><img src="http://localhost:5000/files/images/loading.gif"></div>
+         <div class="errors">{{error}}</div>
+         <h5 (click)="toggle()">Not Registered Yet? Click Here</h5>
+    </div>
+
+
+    <div id="log-reg-form"  *ngIf="!logform">
+        <h2>Fitness Tracker  - Register User</h2>
+
+         <div class="form-item">
+                <label class="label">Username</label>
+                <input type="text"   [(ngModel)]="rusername">
+         </div>
+         <div class="form-item">
+           <label class="label">Password</label>
+           <input type="password"  [(ngModel)]="rpassword">
+        </div>
+
+        <div class="form-item">
+            <label class="label">Verify Password</label>
+            <input type="password"  [(ngModel)]="vpassword">
+         </div>
+         <div class="form-item">
+            <label class="label">Email</label>
+            <input type="text" [(ngModel)]="remail">
+         </div>
+
+        <div class="submit-item">
+            <button type="button" (click)="register()">Register</button>
+        </div>
+        <div class="loading" *ngIf="rstatus"><img src="http://localhost:5000/files/images/loading.gif"></div>
+        <div class="errors">{{rerror}}</div>
+        <h5 (click)="toggle()">Have an Account? Login</h5>
+   </div>
+
+    
+</div>
